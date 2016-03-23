@@ -1,12 +1,13 @@
 # The Client
 
-Firefox or Internet Explorer are typical examples of a client:
+Firefox or Internet Explorer are typical examples of a client.
+They do these kind of things:
 
-* It requests a page of your app and renders it.
-* It allows you to interact with the page by clicking buttons, selecting check boxes and so on.
-* It sends inputs, such as form contents or cookies to your web app.
-* It runs JavaScript of your webapp and other plugins that the page uses, changing the page while doing so.
-* It navigates the web app by following links, or visiting new URLs.
+* It **requests and renders a page** of your app.
+* It allows you **to interact with the page** by clicking buttons, selecting check boxes and so on.
+* It **sends text and other inputs** you make to the webapp.
+* It *runs JavaScript** of your webapp and other plugins that the page uses, changing the page while doing so.
+* It **navigates the web app** by following links, or visiting new URLs.
 
 The client doesn't have to be a browser as you know it from your Desktop environment. At the end, it's the thing that interacts with your web application by requesting pages and sending input back to your test.
 
@@ -18,6 +19,8 @@ Clients come in three flavors:
 
 We'll look at those below.
 
+## Browser Engines
+
 Each browser is based on a **browser engine**:
 The engine can read and render HTML, knows about CSS,
 can probably run JavaScript and (directly or thru plugins)
@@ -28,6 +31,8 @@ Examples for browser engines are:
 * [Gecko](https://developer.mozilla.org/en-US/docs/Mozilla/Gecko) is the browser engine behind Mozilla's **Firefox**. ([Wikipedia](https://en.wikipedia.org/wiki/Gecko_%28software%29))
 * [Servo](https://github.com/servo/servo) is the next-generation engine from Mozilla.
 * [WebKit](http://www.webkit.org/) originally powered **Safari**, but then was forked and is now at the heart of Google's **Chrome** and **Opera**.
+
+### JavaScript Engine
 
 In a finished browser, the browser engine comes with a **JavaScript engine**, the thing that reads and runs JavaScript code.
 Examples for JavaScript engines are:
@@ -101,3 +106,8 @@ http://www.jpalomaki.fi/?p=403
 * HtmlUnit
 * WebTest Canoo
 * Zombie http://zombie.js.org/#browser
+
+
+### Marionette et. al.
+
+https://developer.mozilla.org/en-US/docs/Mozilla/QA/Marionette/WebDriver

@@ -39,3 +39,6 @@ https://experitest.com/
 Selenium RC
 http://sahipro.com/
 Canoo Webdriver
+
+
+https://en.wikipedia.org/wiki/Capybara_%28software%29
