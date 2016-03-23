@@ -1,6 +1,8 @@
 # Explaining the Webapp Testing Landscape
 
-**BEWARE: this is work in progress, and far from done (2016-03-13)**
+## WIP
+
+**BEWARE: this is work in progress, and far from done (2016-03-23)**
 
 ## The Confusion
 
@@ -12,14 +14,14 @@ For a first-timer, this name soup looks rather messy, and is definitely hard to 
 (And not without reason: I find a lot of concepts are being used rather vaguely
 or ambiguously.)
 
-Here, I'll answer these questions:
+For all of those, I'll answer these questions:
 
-1. What is it?
-1. Where can it be found in the technology landscape?
+1. What is it good for?
+1. Where does it fit in the tech landscape?
 
 ### What I don't care about.
 
-By the way, here I'm interested in *end-to-end tests* only. This means tests that interact with your web application running as if in production. No mocking the database, no unit-testing JavaScript UI components. The whole thing. (I'll mention some technologies, like Rhino, but only to point out where the scope of end-to-end testing ends.)
+I'm interested in *end-to-end tests* only. This means tests that interact with your web application running as if in production. No mocking the database, no unit-testing JavaScript UI components. The whole thing. (I'll mention some technologies, like Rhino, but only to point out where the scope of end-to-end testing ends.)
 
 ## Let's get started!
 
@@ -28,12 +30,13 @@ It's a short read, but gives us the words and concepts we need.
 
 With this knowledge, we can explore common use cases:
 
-* [Running Selenium tests with a local PhantomJS]
-* [A Selenium Grid Setup] to parallelize tests.
-* Running your tests against [multiple browsers with Browserstack]
+* [Running Selenium tests with a local PhantomJS](#wip)
+* [A Selenium Grid Setup](#wip) to parallelize tests.
+* Running your tests against [multiple browsers with Browserstack](#wip)
 
-We can dig into the muddy details: [Clients](clients.md) .
-And there is a dedicated page on [Selenium](selenium.md) cuz that's a name cloud if I've ever seen any.
+We can dig into the muddy details: [Client API Providers](#wip), [Orchestrators](#wip) and [Browsers with their Controllers](clients.md).
+
+Selenium is a tech cloud if I've ever seen any, so there is a [dedicated page on Selenium](#wip).
 
 Or, if you want to look up a technology, you can head over to the [Glossary](glossary.md).
 
@@ -42,7 +45,7 @@ Or, if you want to look up a technology, you can head over to the [Glossary](glo
 
 Found an error? A gross omission? A fatal misconception?
 
-This is great!
+That's great!
 
 Please open an issue or just fix it with a PR.
 
