@@ -30,9 +30,10 @@ It's a short read, but gives us the words and concepts we need.
 
 With this knowledge, we can explore common use cases:
 
-* [Running Selenium tests with a local PhantomJS](#wip)
-* [A Selenium Grid Setup](#wip) to parallelize tests.
-* Running your tests against [multiple browsers with Browserstack](#wip)
+  * [Webtest-based Test suites](#wip)
+  * [Running Selenium tests with a local PhantomJS](#wip)
+  * [A Selenium Grid Setup](#wip) to parallelize tests.
+  * Running your tests against [multiple browsers with Browserstack](#wip)
 
 We can dig into the muddy details: [Client API Providers](#wip), [Orchestrators](#wip) and [Browsers with their Controllers](clients.md).
 

@@ -16,30 +16,42 @@ The technologies from the word cloud are either connecting your test code with t
 
 So, let's zoom in for greater detail.
 
-## Zooming In: API and Orchestration
+## Zooming In: API, Controllers and Launchers
 
-How does your test talk to the browser? How do you get your
-“I want to click on the ‘Buy’ button.” to the browser?
+Let's say in your test you want to make Firefox click the “Buy” button on your web app's landing page.
+
+How do you put that in your test? And how do you get that command
+“Press the ‘Buy’ button!” to Firefox?
 That's the **API**'s role; it's giving your test the ability to
-control the client.
+control the browser.
 
-What actually makes Firefox click on a button, if it's not your touchpad?
-That's the /Browser Controller/, or /Controller/ for short.
+Usually, the API layer consists of a library in Your-Language-Of-Choice, for example [selenium](https://pypi.python.org/pypi/selenium/) in the case of Python. That library is the part that you use directly.
+`selenium` then talks to the controller over some sort of API, too, usually using a network protocol, like the WebDriver wire protocol.
 
-So, how does that look now?
+When you've got your command over, what actually makes Firefox click the button, if it's not your touchpad doing it?
+That's the **Browser Controller**, or *Controller* for short. In Firefox case, that'd usually be [Marionette](glossary.md#marionette).
+
+So, how does our architecture look now?
 
     [Test] <-----------> [         Client         ]
 
     [Test] <-> [API] <-> [Controller] <-> [Browser]
 
-With that, we can already discuss a few common scenarios:
+With the technologies I used as examples:
 
-  * Webtest + HtmlUnit
-  * Selenium library + Browser without Selenium Server **???**
 
-## A Browser Remote
+                                     Webdriver
+    [Test in Python] <-> [selenium] <---------> [Marionette] <-> [Firefox]
 
-    [            Test             ]               [        Client          ]
+Uh, but who's actually *starting* your Firefox? Surely, you're not doing that manually every time you run your tests? Right, you need a **Launcher**: Something that makes sure the browser you need is up and running. In our case, `selenium` library is also the Launcher.
 
-                                    <Remote API>
-    [Testcode] <-> [Client library]     <->       [Controller] <-> [Browser]
+That's not a given: Think about a browser on another computer, like you're running your tests on a Windows machine, but want your tests to use Safari on MacOS. Then, the Launcher can't really be on your Windows machine, but needs to be *on the MacOS*. [Selenium Server](glossary.md#selenium-server) is an example for a launcher that's useful for that scenario.
+
+With all this, we can already deeply understand a few common scenarios:
+
+  * [Webtest-based Test suites](README.md#wip)
+  * [Running Selenium tests with a local PhantomJS](README.md#wip)
+
+## Adding Features: Prettier tests and more browsers
+
+DSLs, abstraction libraries and orchestrators
